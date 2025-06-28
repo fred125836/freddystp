@@ -12,7 +12,7 @@ page_1 = st.Page(
     default=True, 
 )
 page_2 = st.Page(
-    page="views/dashboard.py",
+    page="views/Dashboard.py",
     title="Sales Dashboard",
     icon=":material/bar_chart:",
 )
