@@ -166,7 +166,7 @@ with bir1:
         cap = bir3.camera_input("take a photo")
         if cap is not None:
             brd = Image.open (cap)
-            st.image(brd, caption="this is how you look like now", use_container_width=True)
+            st.image(brd, caption="this is how you look like now", use_column_width=True)
             bir3.success("you have uploaded your emage")
 
 
