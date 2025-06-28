@@ -187,7 +187,7 @@ with st.expander("Does JMHP Software work for Deriv Synthetic Indices?"):
     with bir2:
         st.empty()
 
-st.page_link("forms/hello.py", label="Ask our Chatbot anything")
+st.page_link("views/chatbot.py", label="Ask our Chatbot anything")
 
 with st.expander("Enter your info"):
         name = st.text_input("What's your name?")
