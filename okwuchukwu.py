@@ -1,7 +1,7 @@
 import streamlit as st
 from datetime import datetime
 
-st.set_page_config(page_title="hello", layout="centered" )
+st.set_page_config(page_title="hello", layout="wide" )
 
 
 # ---- PAGE SETUP ----
