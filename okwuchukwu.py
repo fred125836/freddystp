@@ -12,7 +12,7 @@ page_1 = st.Page(
     default=True, 
 )
 page_2 = st.Page(
-    page="views/sales_dashboard.py",
+    page="views/dashboard.py",
     title="Sales Dashboard",
     icon=":material/bar_chart:",
 )
@@ -28,7 +28,7 @@ page_4 = st.Page(
 )
 page_5 = st.Page(
     page="views/addition.py",
-    title="hello",
+    title="addition",
     icon=":material/keyboard:", 
 )
 
