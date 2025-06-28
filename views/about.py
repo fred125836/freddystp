@@ -97,7 +97,7 @@ if st.button("submit"):
     st.write(f" your birthday is {birthday}")
 
 
-st.page_link("forms/hello.py", label="go to our hello page")
+st.page_link("views/addition.py", label="go to our hello page")
 # Custom centered and colored text
 st.markdown(
     """
