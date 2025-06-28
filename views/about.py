@@ -13,7 +13,7 @@ def show_contact_form():
 
 col1, col2 = st.columns(2, gap="small", vertical_alignment="top")
 with col1:
-    st.page_link("views/about_the_developer.py", label=":red[**Go to About the Developer**]")
+    st.page_link("views/Developer.py", label=":red[**Go to About the Developer**]")
     with col2:
         st.page_link("views/chatbot.py", label="Ask our Chatbot anything")
 file = Image.open("images/trader.jpg")
