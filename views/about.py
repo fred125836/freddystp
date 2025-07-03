@@ -152,7 +152,7 @@ with bir1:
                 justify-content: center;
                 color: black;
             ">
-                <h3 style="margin: 0;"Price Action Based</h3>
+                <h3 style="margin: 0;">Price Action Based</h3>
                 <p>Leverages pure price action analysis for reliable signals without lagging indicator.</p>
             </div>
             """,
@@ -174,7 +174,7 @@ with bir1:
                 justify-content: center;
                 color: black;
             ">
-                <h3 style="margin: 0;"All Timeframes</h3>
+                <h3 style="margin: 0;">All Timeframes</h3>
                 <p>Works on any timeframes from 1 munite to monthly charts.</p>
             </div>
             """,
