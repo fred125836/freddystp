@@ -140,8 +140,8 @@ with bir1:
     with bir2:
         st.markdown("""
             <div style="
-                width: 300px;
-                height: 420px;
+                width: 380px;
+                height: 290px;
                 padding: 20px;
                 background-color: white;
                 border-radius: 15px;
