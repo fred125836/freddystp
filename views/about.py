@@ -112,18 +112,16 @@ st.markdown(
 )
 
 
-
-# White box with shadow on top of blue background
 bir1, bir2, bir3 = st.columns(3, gap="medium")
 with bir1: 
     st.markdown(
      """
         <div style="
-            width: 300px;
-            height: 420px;
+            width: 320px;
+            height: 200px;
             padding: 20px;
             background-color: white;
-            border-radius: 15px;
+            border-radius: 20px;
             box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.3);
             margin: 50px auto;
             text-align: center;
