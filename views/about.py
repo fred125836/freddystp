@@ -112,7 +112,7 @@ st.markdown(
 )
 
 
-bir1, bir2, bir3 = st.columns(3, gap="medium")
+bir1, bir2, bir3 = st.columns(3, gap="small")
 with bir1: 
     st.markdown(
      """
