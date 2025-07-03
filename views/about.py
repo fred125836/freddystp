@@ -130,9 +130,8 @@ with bir1:
             justify-content: center;
             color: black;
         ">
-            <h3 style="margin: 0;">Hello Streamlit</h3>
-            <p>This box is on a blue background with a shadow.</p>
-            <p>This box is on a blue background with a shadow.</p>
+            <h3 style="margin: 0;">Clear Buy/Sell Signals</h3>
+            <p>Precise entry and exit points to maximize your trading profits.</p>
         </div>
         """,
         unsafe_allow_html=True
@@ -153,20 +152,34 @@ with bir1:
                 justify-content: center;
                 color: black;
             ">
-                <h3 style="margin: 0;">Hello Streamlit</h3>
-                <p>This box is on a blue background with a shadow.</p>
-                <p>This box is on a blue background with a shadow.</p>
+                <h3 style="margin: 0;"Price Action Based</h3>
+                <p>Leverages pure price action analysis for reliable signals without lagging indicator.</p>
             </div>
             """,
             unsafe_allow_html=True
         )
-        st.write("##")
-        cap = bir3.camera_input("take a photo")
-        if cap is not None:
-            brd = Image.open (cap)
-            st.image(brd, caption="this is how you look like now", use_container_width=True)
-            bir3.success("you have uploaded your emage")
-
+    with bir3:
+        st.markdown("""
+            <div style="
+                width: 380px;
+                height: 290px;
+                padding: 20px;
+                background-color: white;
+                border-radius: 15px;
+                box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.3);
+                margin: 50px auto;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                color: black;
+            ">
+                <h3 style="margin: 0;"All Timeframes</h3>
+                <p>Works on any timeframes from 1 munite to monthly charts.</p>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
 
 with st.expander("Is JMHP Software a robot or EA that trades for me automatically?"):
     st.write(
