@@ -117,8 +117,8 @@ with bir1:
     st.markdown(
      """
         <div style="
-            width: 320px;
-            height: 200px;
+            width: 420px;
+            height: 250px;
             padding: 20px;
             background-color: white;
             border-radius: 20px;
