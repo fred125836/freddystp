@@ -45,6 +45,41 @@ st.markdown('<a href="/page_2" class="custom-link">Go to Page 2</a>', unsafe_all
 
 st.link_button("_go to_ our payment :blue[website]", "https://www.jmhpsoftware.com")
 
+import streamlit as st
+
+# Set page config
+st.set_page_config(page_title="Floating Button Demo", layout="wide")
+
+# Floating Button CSS + HTML
+st.markdown("""
+    <style>
+    .floating-btn {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #4CAF50;
+        color: black;
+        padding: 14px 20px;
+        border: none;
+        border-radius: 8px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 9999;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .floating-btn:hover {
+        background-color: #45a049;
+        transform: scale(1.05);
+    }
+    </style>
+
+    <a href="https://www.jmhpsoftware.com" target="_blank" class="floating-btn">Go to Site</a>
+""", unsafe_allow_html=True)
+
+
 with st.container():
     st.badge("enejo")
     st.title("this is under st container")
