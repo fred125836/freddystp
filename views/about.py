@@ -223,6 +223,7 @@ with st.expander("Does JMHP Software work for Deriv Synthetic Indices?"):
     )
     with bir2:
         st.empty()
+st.write("###")
 
 st.page_link("views/chatbot.py", label="Ask our Chatbot anything")
 
