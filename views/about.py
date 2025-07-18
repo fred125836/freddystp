@@ -227,7 +227,7 @@ st.write("###")
 
 st.page_link("views/chatbot.py", label="Ask our Chatbot anything")
 
-st.write("###)
+st.write("###")
 img = st.camera_input("please upload an image")
 if img is not None:
     caps = Image.open(img)
