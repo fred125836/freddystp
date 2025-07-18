@@ -226,13 +226,6 @@ with st.expander("Does JMHP Software work for Deriv Synthetic Indices?"):
 
 st.page_link("views/chatbot.py", label="Ask our Chatbot anything")
 
-with st.expander("Enter your info"):
-        name = st.text_input("What's your name?")
-        age = st.number_input("Your age", min_value=0)
-        if st.button("sumit"):
-            st.write(f"Hello {name}, you are {age} years old.")
-st.link_button("gigi", "hello.py")
-    
 img = st.camera_input("please upload an image")
 if img is not None:
     caps = Image.open(img)
