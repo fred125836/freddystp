@@ -38,6 +38,8 @@ def get_bot_response(user_input):
         return "Tosin, Tijani, Dorcas and Olamide"
     elif "How can i contact the developer" in user_input:
         return "[contact the developer](https://wa.me+2447065749325)"
+    elif "who is this" in user_input:
+        return "I am the one"
     else:
         return "Sorry, I don't understand that yet."
 
