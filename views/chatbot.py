@@ -36,6 +36,8 @@ def get_bot_response(user_input):
         return "you can obtain the software for $100 annaully"
     elif "what are the names of stp staff" in user_input:
         return "Tosin, Tijani, Dorcas and Olamide"
+    elif "How can i contact the developer" in user_input:
+        return "[contact the developer](https://wa.me+2447065749325)"
     else:
         return "Sorry, I don't understand that yet."
 
