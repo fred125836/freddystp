@@ -1,6 +1,7 @@
 import streamlit as st
 import time
-
+from datetime import datetime
+now = datetime.now
 # Set page config
 st.set_page_config(page_title="Custom Chatbot", layout="centered")
 
@@ -18,7 +19,7 @@ def get_bot_response(user_input):
     elif "who developed this website" in user_input:
         return "okwuchukwu onwuegbuna."
     elif "time" in user_input:
-        return "I don't have a watch, but it's always a good time to chat!"
+        return f"I don't have a watch, but it's always a good time to chat!{now}"
     elif "there" in user_input:
         return "you are there"
     elif "how are you doing" in user_input:
