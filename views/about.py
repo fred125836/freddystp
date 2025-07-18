@@ -16,11 +16,7 @@ with col1:
     st.page_link("views/about_the_developer.py", label=":red[**Go to About the Developer**]")
     with col2:
         st.page_link("views/chatbot.py", label="Ask our Chatbot anything")
-file = Image.open("images/trader.jpg")
-if file is not None:
-    st.image(file)
-else:
-    st.write("nothing to show here")
+
         
 import streamlit as st
 
@@ -40,15 +36,10 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Styled link
-st.markdown('<a href="/page_2" class="custom-link">Go to Page 2</a>', unsafe_allow_html=True)
-
 st.link_button("_go to_ our payment :blue[website]", "https://www.jmhpsoftware.com")
 
 import streamlit as st
 
-# Set page config
-st.set_page_config(page_title="Floating Button Demo", layout="wide")
 
 # Floating Button CSS + HTML
 st.markdown("""
