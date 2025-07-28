@@ -36,7 +36,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.link_button("_go to_ our payment :blue[website]", "https://www.jmhpsoftware.com")
+st.link_button(":red[_GO TO_ OUR PAYMENT _WEBSITE_] ", "https://www.jmhpsoftware.com")
 
 import streamlit as st
 
