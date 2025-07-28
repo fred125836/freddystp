@@ -36,7 +36,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.link_button(":red[_GO TO_ OUR PAYMENT _WEBSITE_] ", "https://wa.me/07065749325")
+st.link_button(":red[_GO TO_ OUR PAYMENT _WEBSITE_] ", "https://wa.me/+2347065749325")
 
 import streamlit as st
 
