@@ -3,9 +3,6 @@ from forms.contact import contact_form
 from PIL import Image
 import io
 
-
-
-
 @st.dialog("contact me💌")
 def show_contact_form():
     contact_form()
