@@ -7,7 +7,7 @@ import io
 def show_contact_form():
     contact_form()
 
-
+st.audio_input("record an audio")
 col1, col2 = st.columns(2, gap="small", vertical_alignment="top")
 with col1:
     st.page_link("views/about_the_developer.py", label=":red[**Go to About the Developer**]")
