@@ -1,45 +1,48 @@
 import streamlit as st
-from rembg import remove
-from PIL import Image, ImageOps
-import io
+from io import BytesIO
+from reportlab.lib.pagesizes import letter
+from reportlab.pdfgen import canvas
 
-st.set_page_config(page_title="Background Remover with Color Replace", layout="centered")
+# Function to create PDF from user input
+def create_pdf(user_inputs):
+    buffer = BytesIO()
+    c = canvas.Canvas(buffer, pagesize=letter)
+    width, height = letter
 
-st.title("🎨 Background Remover + Background Color Changer")
+    text_object = c.beginText(40, height - 50)
+    text_object.setFont("Helvetica", 12)
 
-uploaded_file = st.file_uploader("Upload an image", type=["png", "jpg", "jpeg"])
+    for key, value in user_inputs.items():
+        text_object.textLine(f"{key}: {value}")
+        text_object.textLine("")  # Add space between entries
 
-# Select background color
-bg_color = st.color_picker("Pick a background color", "#ffffff")
+    c.drawText(text_object)
+    c.showPage()
+    c.save()
+    buffer.seek(0)
+    return buffer
 
-if uploaded_file is not None:
-    input_image = Image.open(uploaded_file).convert("RGBA")
-    st.image(input_image, caption="Original Image", use_column_width=True)
+# Streamlit UI
+st.title("User Input to PDF")
 
-    with st.spinner("Removing background..."):
-        # Convert input image to bytes
-        input_bytes = io.BytesIO()
-        input_image.save(input_bytes, format='PNG')
-        input_bytes = input_bytes.getvalue()
+# Collect user input
+name = st.text_input("Enter your name:")
+email = st.text_input("Enter your email:")
+message = st.text_area("Your message:")
 
-        # Remove background
-        output_bytes = remove(input_bytes)
-        foreground = Image.open(io.BytesIO(output_bytes)).convert("RGBA")
+# Store all inputs in a dictionary
+user_data = {
+    "Name": name,
+    "Email": email,
+    "Message": message
+}
 
-        # Create new background color image
-        background = Image.new("RGBA", foreground.size, bg_color)
-
-        # Composite foreground over colored background
-        final_image = Image.alpha_composite(background, foreground)
-
-        st.image(final_image, caption="Image with New Background", use_column_width=True)
-
-        # Download button
-        final_bytes = io.BytesIO()
-        final_image.save(final_bytes, format="PNG")
-        st.download_button(
-            label="📥 Download Image with New Background",
-            data=final_bytes.getvalue(),
-            file_name="new_background.png",
-            mime="image/png"
-        )
+# Button to generate and download PDF
+if st.button("Generate PDF"):
+    pdf_buffer = create_pdf(user_data)
+    st.download_button(
+        label="Download PDF",
+        data=pdf_buffer,
+        file_name="user_input.pdf",
+        mime="application/pdf"
+    )
